@@ -33,6 +33,16 @@ helpers do
   rescue StandardError
     {}
   end
+
+  def status_payload
+    {
+      status: 'online',
+      engine: "Sinatra / Ruby #{RUBY_VERSION}",
+      server: 'WEBrick / Sinatra',
+      persistence: 'JSON File Store',
+      timestamp: Time.now.iso8601
+    }.to_json
+  end
 end
 
 # Root: Serve index.html
@@ -43,13 +53,11 @@ end
 
 # Status
 get '/api/status' do
-  {
-    status: 'online',
-    engine: "Sinatra / Ruby #{RUBY_VERSION}",
-    server: 'WEBrick / Sinatra',
-    persistence: 'JSON File Store',
-    timestamp: Time.now.iso8601
-  }.to_json
+  status_payload
+end
+
+post '/api/status' do
+  status_payload
 end
 
 # Analytics & Adherence Summary
