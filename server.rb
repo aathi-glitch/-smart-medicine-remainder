@@ -339,7 +339,7 @@ module MediPulseRouter
     end
 
     # --- 1. Status Check ---
-    if method == 'GET' && path == '/api/status'
+    if method == 'POST' && path == '/api/status'
       return json_response(200, {
         status: 'online',
         engine: "Ruby #{RUBY_VERSION}",
