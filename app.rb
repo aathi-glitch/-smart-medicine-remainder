@@ -42,7 +42,7 @@ get '/' do
 end
 
 # Status
-post '/api/status' do
+get '/api/status' do
   {
     status: 'online',
     engine: "Sinatra / Ruby #{RUBY_VERSION}",
