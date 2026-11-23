@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "true",
+  "buildCommand": "mkdir -p dist && cp index.html app.js style.css osc.frequency.js medicine_data.json dist/",
+  "outputDirectory": "dist"
+}
