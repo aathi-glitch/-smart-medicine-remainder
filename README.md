@@ -83,7 +83,7 @@ Finished in 0.062s, 191 runs/s, 589 assertions/s.
 
 | HTTP Method | Route | Description |
 |---|---|---|
-| `GET` | `/api/status` | Health check & Ruby engine version (`Ruby #{RUBY_VERSION}`) |
+| `GET`, `POST` | `/api/status` | Health check & Ruby engine version (`Ruby #{RUBY_VERSION}`) |
 | `GET` | `/api/analytics` | Real-time adherence rate %, current streak days, and low stock count |
 | `GET` | `/api/medications` | Fetch all active prescription medications |
 | `POST` | `/api/medications` | Add a new medication with dose schedules, stock, and food conditions |
